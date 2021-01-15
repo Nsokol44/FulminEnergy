@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<div class="header position-relative">
+  <img src="{% static 'images/MainLogo_AlternativeColor.png' %}" alt="logo" width=240px height=50px>
+</div>
+
+<br>
+
+<div class="card border-warning w-100" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Our Mission</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Energy On Demand</h6>
+    <p class="card-text"> Clean power from where you want it and when you need it. Our goal is to allow you to optimize your energy use by renting
+      PowerCells that are charged with the energy of your choosing. Utilize the best energy source for your needs. </p>
+      <!--  <a href="#" class="card-link">Card link</a> -->
+      <!--  <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+
+  <br>
+
+  <div class="card border-warning w-100" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">How We Work</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Not Tied to the Grid</h6>
+      <p class="card-text">Fulmin utilizes portable battery technology and flexible charging solutions for those batteries. There is no need to purchase and install
+        an expensive battery or solar panel solution for your home. Merely download our app, install our FulPlug, and start renting batteries charged by the cleanest energy sources.
+        Our PowerOrb technology will be delivered to your home on the same day and all you have to do is plug it in to get power for your devices.</p>
+        <button class="btn btn-outline-success" color="purple" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+          See How It Works
+        </button>
+        <div class="collapse" id="collapse1">
+          <br>
+
+          <div class="row">
+
+          <div class="col-md-2 ">
+          <img src="{% static 'images/device-mobile.svg' %}" alt="">
+          </div>
+          <div class="col-md-2 ">
+          <img src="{% static 'images/arrow-right.svg' %}" alt="">
+          </div>
+          <div class="col-md-2 ">
+          <img src="{% static 'images/sun.svg' %}" alt="">
+          </div>
+          <div class="col-md-2 ">
+          <img src="{% static 'images/arrow-right.svg' %}" alt="">
+          </div>
+          <div class="col-md-2 ">
+          <img src="{% static 'images/pulse.svg' %}" alt="">
+          </div>
+
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              1. Log into our mobile/web app.
+            </div>
+            <div class="col-md-4">
+              2. Select your power source.
+            </div>
+            <div class="col-md-3">
+              3. Have a PowerCell delivered to your home. Simply notify us when you need another or want to return it until your next use.
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card border-warning w-100" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">A New Energy Future</h5>
+        <h6 class="card-subtitle mb-2 text-muted">One Where You Control Your Power's Origin, Price, and Reliability</h6>
+        <p class="card-text"> Grid letting you down? Sun not shining? Wind not blowing? No worries. Our batteries are charged ahead of time and by a variety of cutting edge and diverse
+          sources. You can choose where your energy comes from and at the price you want. All with the click of a button. </p>
+          <button class="btn btn-outline-success" color="purple" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            What We Can Do For You.
+          </button>
+          <div class="collapse" id="collapse2">
+            <br>
+            <div class="col-md-6">
+              <table>
+                <ul>
+                  100% Reliability.
+                </ul>
+                <ul>
+                  100% Clean Energy.
+                </ul>
+                <ul>
+                  Exceptional home energy savings with minimal setup and installation.
+                </ul>
+                <ul>
+                  Sourced from Solar, Wind, Hydrogen - Fuel Cell, and Osmotic Power.
+                </ul>
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<br>
+
+<div style="background:#ffd460 !important"  class="jumbotron">
+  <h2>Sign Up for Updates!</h2>
+  <br>
+  <form method="post" enctpye="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-success" type="submit" name="">Submit</button>
+  </form>
+
+</div>
+
+{% endblock %}
