@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from django.conf.urls.static import static
 
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -45,7 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing',
-    'crispy_forms',
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
